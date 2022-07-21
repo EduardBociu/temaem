@@ -15,7 +15,8 @@ body,
   width: 100vw;
   height: 100vh;
   /* background-image: radial-gradient(var(--white), var(--light-gray)); */
-  background-color: var(--white);
+  /* background-color: var(--white); */
+  background-image: linear-gradient(to bottom, var(--light-gray), var(--white));
   font-family: "Poppins", sans-serif;
 }
 
@@ -199,7 +200,8 @@ section.menu {
 
 .ticket h3 {
   color: var(--white);
-  margin: 1vw 2vw;
+  margin: 0.75vw 2vw;
+  text-transform: uppercase;
 }
 
 .ticket h1 {
@@ -260,6 +262,7 @@ div.info_icon {
 
 div.info_text {
   width: 45vw;
+  font-size: 20px;
 }
 
 /* Start */
