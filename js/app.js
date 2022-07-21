@@ -4,6 +4,17 @@ const tickets = [
   { name: "Prize 3", ammount: 50 },
 ];
 
+class Log {
+  constructor(action, id) {
+    this.action = action;
+    this.button = id;
+  }
+
+  alert() {
+    console.log(this);
+  }
+}
+
 let menu = document.querySelectorAll(".ticket");
 let buttons = document.querySelectorAll("button");
 
@@ -17,7 +28,8 @@ let addEvents = () => {
 
   buttons.forEach((element) => {
     element.addEventListener("click", () => {
-      console.log(`{action: click, button: ${element.innerText}}`);
+      let action = new Log("click", element.innerText);
+      action.alert();
     });
   });
 };
