@@ -16,14 +16,18 @@ body,
   height: 100vh;
   /* background-image: radial-gradient(var(--white), var(--light-gray)); */
   /* background-color: var(--white); */
-  background-image: linear-gradient(to bottom, var(--light-gray), var(--white));
+  /* background-image: linear-gradient(to bottom, var(--light-gray), var(--white)); */
+  background-image: url(../img/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   font-family: "Poppins", sans-serif;
 }
 
 /* HEADER */
 header {
   width: 100vw;
-  height: 20vh;
+  height: 15vh;
   padding: 1vh 5vw;
 
   /* flexbox alignment */
@@ -190,14 +194,14 @@ section.menu {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 20vw;
-  height: 16vw;
+  width: 25vw;
+  height: 20vw;
 }
 
 .ticket_mask {
   margin: 1vh auto;
-  width: 16vw;
-  height: 12vw;
+  width: 22.5vw;
+  height: 15vw;
   background-image: url(../img/ticket.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -206,7 +210,7 @@ section.menu {
 }
 
 .price_bar {
-  width: 12vw;
+  width: 15vw;
   height: 1vh;
   position: fixed;
   background-color: var(--dark-gray);
@@ -219,12 +223,12 @@ section.menu {
 
 .op2 .price_bar {
   top: 45vh;
-  left: 47vw;
+  left: 50vw;
 }
 
 .op3 .price_bar {
   top: 45vh;
-  left: 67vw;
+  left: 73vw;
 }
 
 .price_progress {
@@ -243,18 +247,18 @@ section.menu {
   width: 8vw;
   background-color: var(--clr2);
   top: 45vh;
-  left: 47vw;
+  left: 50vw;
 }
 
 .op3 .price_progress {
   width: 11vw;
   background-color: var(--clr1);
   top: 45vh;
-  left: 67vw;
+  left: 73vw;
 }
 
 h2.id {
-  font-size: 29px;
+  font-size: 35px;
   position: fixed;
   font-weight: lighter;
 }
@@ -266,39 +270,37 @@ h2.id {
 
 .op2 h2.id {
   top: 35vh;
-  left: 49vw;
+  left: 52vw;
 }
 
 .op3 h2.id {
   top: 35vh;
-  left: 69vw;
+  left: 75vw;
 }
 
 h1.price {
-  font-size: 60px;
+  font-size: 75px;
   position: fixed;
+  top: 37vh;
 }
 
 .op1 h1.price {
-  top: 39vh;
   left: 29.5vw;
   color: var(--clr3);
 }
 
 .op2 h1.price {
-  top: 39vh;
-  left: 49.5vw;
+  left: 52.5vw;
   color: var(--clr2);
 }
 
 .op3 h1.price {
-  top: 39vh;
-  left: 69.5vw;
+  left: 74vw;
   color: var(--clr1);
 }
 
 h3.text {
-  font-size: 24px;
+  font-size: 30px;
   position: fixed;
   font-weight: lighter;
   text-transform: uppercase;
@@ -313,13 +315,13 @@ h3.text {
 .op2 h3.text {
   color: var(--clr2);
   top: 52vh;
-  left: 49.5vw;
+  left: 52.5vw;
 }
 
 .op3 h3.text {
   color: var(--clr1);
   top: 52vh;
-  left: 69.5vw;
+  left: 75.5vw;
 }
 
 /* Info */
