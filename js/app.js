@@ -13,46 +13,45 @@ const ticketsData = [
   },
 ];
 
-let tickets = [];
-let ticketButtons = document.querySelectorAll("div.ticket");
-let buttons = document.querySelectorAll("button");
-
-class Ticket {
-  constructor(id, price) {
-    this.id = id;
-    this.price = price;
-  }
-
-  addElement(element) {
-    this.element = element;
-  }
-
-  Log() {
-    console.log(`Value: ${this.price}\nId: ${this.id}`);
-  }
-}
-
 class Button {
   constructor(element) {
     this.action = "click";
-    this.id = element.innerText;
+    this.button = element.innerText;
   }
 
   Log() {
-    console.log(`Action: ${this.action}, button: ${this.id}`);
+    console.warn(this);
   }
 }
 
-const addEvents = () => {
-  for (let i = 0; i < ticketButtons.length; i++) {
-    let ticket = new Ticket(ticketsData[i].id, ticketsData[i].price);
-    ticket.addElement(ticketButtons[i]);
-    tickets.push(ticket);
-    ticketButtons[i].addEventListener("click", ticket.Log());
-  }
+let ticketsDOM = document.querySelectorAll("div.ticket");
+let buttons = document.querySelectorAll("button");
 
-  buttons.forEach((element) => {
-    let button = new Button(element);
-    element.addEventListener("click", button.Log());
-  });
+let renderTickets = () => {
+  for (let i = 0; i < ticketsDOM.length; i++) {
+    ticketsDOM[i].querySelector("h2").innerText = ticketsData[i].id;
+    ticketsDOM[i].querySelector("h1").innerText = `${ticketsData[i].price}€`;
+  }
 };
+
+renderTickets();
+
+let ticketListeners = () => {
+  for (let i = 0; i < ticketsDOM.length; i++) {
+    ticketsDOM[i].addEventListener("click", () => {
+      console.warn(`Value: ${ticketsData[i].price}\nId: ${ticketsData[i].id}`);
+    });
+  }
+};
+
+let buttonsListeners = () => {
+  for (let i = 0; i < buttons.length; i++) {
+    let button = new Button(buttons[i]);
+    buttons[i].addEventListener("click", () => {
+      button.Log();
+    });
+  }
+};
+
+buttonsListeners();
+ticketListeners();
