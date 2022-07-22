@@ -185,177 +185,51 @@ section.menu {
 }
 
 .ticket {
-  background-image: url(../img/ticketbg.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 20vw;
-  height: 16vw;
-}
-
-.ticket_mask {
-  margin: 1vh auto;
-  width: 16vw;
-  height: 12vw;
-  background-image: url(../img/ticket.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 18vw;
+  height: 14vw;
+  -webkit-mask: url(../img/ticket.svg);
+  mask: url(../img/ticket.svg);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
   padding: 5vh 4vw;
+  /* background-color: var(--gray); */
 }
 
-.price_bar {
-  width: 12vw;
-  height: 1vh;
-  position: fixed;
-  background-color: var(--dark-gray);
-}
-
-.op1 .price_bar {
-  top: 45vh;
-  left: 27vw;
-}
-
-.op2 .price_bar {
-  top: 45vh;
-  left: 47vw;
-}
-
-.op3 .price_bar {
-  top: 45vh;
-  left: 67vw;
-}
-
-.price_progress {
-  height: 1vh;
-  position: fixed;
-}
-
-.op1 .price_progress {
-  width: 5vw;
-  background-color: var(--clr1);
-  top: 45vh;
-  left: 27vw;
-}
-
-.op2 .price_progress {
-  width: 8vw;
-  background-color: var(--clr2);
-  top: 45vh;
-  left: 47vw;
-}
-
-.op3 .price_progress {
-  width: 11vw;
-  background-color: var(--clr3);
-  top: 45vh;
-  left: 67vw;
-}
-
-h2.id {
-  font-size: 29px;
-  position: fixed;
-  font-weight: lighter;
-}
-
-.op1 h2.id {
-  top: 35vh;
-  left: 29vw;
-}
-
-.op2 h2.id {
-  top: 35vh;
-  left: 49vw;
-}
-
-.op3 h2.id {
-  top: 35vh;
-  left: 69vw;
-}
-
-h1.price {
-  font-size: 60px;
-  position: fixed;
-}
-
-.op1 h1.price {
-  top: 39vh;
-  left: 29.5vw;
-  color: var(--clr1);
-}
-
-.op2 h1.price {
-  top: 39vh;
-  left: 49.5vw;
-  color: var(--clr2);
-}
-
-.op3 h1.price {
-  top: 39vh;
-  left: 69.5vw;
-  color: var(--clr3);
-}
-
-h3.text {
-  font-size: 24px;
-  position: fixed;
-  font-weight: lighter;
+.ticket h3 {
+  color: var(--white);
+  margin: 0.75vw 2vw;
   text-transform: uppercase;
 }
 
-.op1 h3.text {
-  color: var(--clr1);
-  top: 52vh;
-  left: 29.5vw;
+.ticket h1 {
+  color: var(--white);
+  font-size: 4.2vw;
+  margin: 0;
 }
 
-.op2 h3.text {
-  color: var(--clr2);
-  top: 52vh;
-  left: 49.5vw;
+.op1 {
+  background-color: var(--clr1);
 }
 
-.op3 h3.text {
-  color: var(--clr3);
-  top: 52vh;
-  left: 69.5vw;
+.op2 {
+  background-color: var(--clr2);
+}
+
+.op3 {
+  background-color: var(--clr3);
 }
 
 /* Info */
 section.info {
-  padding: 1vh 3vw;
+  padding: 2vh 3vw;
+  border: 3px solid var(--light-gray);
+  border-radius: 2vh;
 
   /* flexbox alignment */
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-justify-content: center;
-  -ms-flex-pack: justify;
-  justify-content: center;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 1vh 2vw;
-}
-
-div.info_text {
-  width: 45vw;
-  font-size: 18px;
-  text-align: center;
-}
-
-/* Action */
-section.action {
-  /* flexbox */
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -374,11 +248,28 @@ section.action {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 1vh 2vw;
 }
 
-button.action {
-  width: 20vw;
-  height: 10vh;
+div.info_icon {
+  width: 5vw;
+  height: 5vw;
+  background-image: url(../img/info.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.7;
+}
+
+div.info_text {
+  width: 45vw;
+  font-size: 20px;
+}
+
+/* Start */
+button.start {
+  width: 60vw;
+  height: 15vh;
   margin-left: 2vw;
   margin-top: 5vh;
   background-color: var(--primary);
@@ -386,8 +277,8 @@ button.action {
   outline: none;
   border: 3px solid var(--primary);
   border-radius: 5vh;
-  font-size: 25px;
-  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: bold;
 
   /* flexbox */
   display: -ms-flexbox;
