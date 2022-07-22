@@ -144,6 +144,7 @@ div.sold {
 .sold {
   margin: 0 0.1vw;
   font-size: 4vh;
+  color: var(--primary-dark);
 }
 
 /* CONTENT */
@@ -233,7 +234,7 @@ section.menu {
 
 .op1 .price_progress {
   width: 5vw;
-  background-color: var(--clr1);
+  background-color: var(--clr3);
   top: 45vh;
   left: 27vw;
 }
@@ -247,7 +248,7 @@ section.menu {
 
 .op3 .price_progress {
   width: 11vw;
-  background-color: var(--clr3);
+  background-color: var(--clr1);
   top: 45vh;
   left: 67vw;
 }
@@ -281,7 +282,7 @@ h1.price {
 .op1 h1.price {
   top: 39vh;
   left: 29.5vw;
-  color: var(--clr1);
+  color: var(--clr3);
 }
 
 .op2 h1.price {
@@ -293,7 +294,7 @@ h1.price {
 .op3 h1.price {
   top: 39vh;
   left: 69.5vw;
-  color: var(--clr3);
+  color: var(--clr1);
 }
 
 h3.text {
@@ -304,7 +305,7 @@ h3.text {
 }
 
 .op1 h3.text {
-  color: var(--clr1);
+  color: var(--clr3);
   top: 52vh;
   left: 29.5vw;
 }
@@ -316,7 +317,7 @@ h3.text {
 }
 
 .op3 h3.text {
-  color: var(--clr3);
+  color: var(--clr1);
   top: 52vh;
   left: 69.5vw;
 }
@@ -410,13 +411,30 @@ button.action {
   align-items: center;
 }
 
-div.deposit_logo {
-  width: 5vw;
-  height: 5vh;
-  background-image: url(../img/deposit.png);
+button.back,
+button.history {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+button.action > div {
+  width: 3.5vw;
+  height: 3.5vh;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+div.back_logo {
+  background-image: url(../img/back.png);
+}
+
+div.history_logo {
+  background-image: url(../img/history.png);
+}
+
+div.main_logo {
+  background-image: url(../img/main.png);
 }
 
 /* FOOTER */
