@@ -26,11 +26,40 @@ class Button {
 
 let ticketsDOM = document.querySelectorAll("div.ticket");
 let buttons = document.querySelectorAll("button");
+let ticketsParent = document.querySelector("section.menu");
 
 let renderTickets = () => {
-  for (let i = 0; i < ticketsDOM.length; i++) {
-    ticketsDOM[i].querySelector("h2").innerText = ticketsData[i].id;
-    ticketsDOM[i].querySelector("h1").innerText = `${ticketsData[i].price}€`;
+  for (let i = 0; i < ticketsData.length; i++) {
+    let ticket = document.createElement("div");
+    ticket.classList.add("ticket", `op${i + 1}`);
+    ticketsParent.append(ticket);
+
+    let ticketMask = document.createElement("div");
+    ticketMask.classList.add("ticket_mask");
+    ticket.append(ticketMask);
+
+    let idOut = document.createElement("h2");
+    idOut.classList.add("id");
+    idOut.innerText = ticketsData[i].id;
+    ticket.append(idOut);
+
+    let priceBar = document.createElement("div");
+    priceBar.classList.add("price_bar");
+    ticket.append(priceBar);
+
+    let priceProgress = document.createElement("div");
+    priceProgress.classList.add("price_progress");
+    priceBar.append(priceProgress);
+
+    let priceOut = document.createElement("h1");
+    priceOut.classList.add("price");
+    priceOut.innerText = `${ticketsData[i].price}€`;
+    ticket.append(priceOut);
+
+    let ticketText = document.createElement("h3");
+    ticketText.classList.add("text");
+    ticketText.innerText = `Ticket`;
+    ticket.append(ticketText);
   }
 };
 
