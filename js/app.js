@@ -13,6 +13,10 @@ const ticketsData = [
   },
 ];
 
+let ticketsDOM;
+let buttons;
+let ticketsParent = document.querySelector("section.menu");
+
 class Button {
   constructor(element) {
     this.action = "click";
@@ -24,9 +28,10 @@ class Button {
   }
 }
 
-let ticketsDOM = document.querySelectorAll("div.ticket");
-let buttons = document.querySelectorAll("button");
-let ticketsParent = document.querySelector("section.menu");
+let getDOM = () => {
+  ticketsDOM = document.querySelectorAll("div.ticket");
+  buttons = document.querySelectorAll("button");
+};
 
 let renderTickets = () => {
   for (let i = 0; i < ticketsData.length; i++) {
@@ -61,6 +66,8 @@ let renderTickets = () => {
     ticketText.innerText = `Ticket`;
     ticket.append(ticketText);
   }
+
+  getDOM();
 };
 
 renderTickets();
